@@ -1,0 +1,50 @@
+before:
+  hooks:
+    - go mod tidy
+    - go generate ./...
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    binary: hello
+
+dockers:
+  - image_templates:
+    - "ghcr.io/renevo/placeholder/hello:{{ .Version }}-amd64"
+    goos: linux
+    goarch: amd64
+    dockerfile: Dockerfile
+    build_flag_templates:
+      - "--platform=linux/amd64"
+
+  - image_templates:
+    - "ghcr.io/renevo/placeholder/hello:{{ .Version }}-arm64"
+    goos: linux
+    goarch: arm64
+    dockerfile: Dockerfile
+    build_flag_templates: 
+      - "--platform=linux/arm64/v8"
+
+docker_manifests:
+  - name_template: "ghcr.io/renevo/placeholder/hello:{{ .Version }}"
+    image_templates:
+      - "ghcr.io/renevo/placeholder/hello:{{ .Version }}-amd64"
+      - "ghcr.io/renevo/placeholder/hello:{{ .Version }}-arm64"
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^art:'
+      - '^fonts:'
