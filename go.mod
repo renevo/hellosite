@@ -4,7 +4,7 @@ go 1.21
 
 toolchain go1.21.0
 
-require github.com/renevo/bootstrap v0.5.0
+require github.com/renevo/bootstrap v0.5.1
 
 require (
 	github.com/agext/levenshtein v1.2.3 // indirect

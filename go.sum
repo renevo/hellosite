@@ -72,6 +72,8 @@ github.com/prometheus/procfs v0.11.1 h1:xRC8Iq1yyca5ypa9n1EZnWZkt7dwcoRPQwX/5gwa
 github.com/prometheus/procfs v0.11.1/go.mod h1:eesXgaPo1q7lBpVMoMy0ZOFTth9hBn4W/y0/p/ScXhY=
 github.com/renevo/bootstrap v0.5.0 h1:gMLpLd0Es19Q2KlpLf3H9q240/ey7QqdtmVAXvtJ+i4=
 github.com/renevo/bootstrap v0.5.0/go.mod h1:cVgAyCEZsk1nMMoSdqCIJmNv7LCgJCPR5un9jmyO4cc=
+github.com/renevo/bootstrap v0.5.1 h1:J1aY8554RdNOqc+vtvyiLC+Syw50fqB77y+M4ROOo40=
+github.com/renevo/bootstrap v0.5.1/go.mod h1:cVgAyCEZsk1nMMoSdqCIJmNv7LCgJCPR5un9jmyO4cc=
 github.com/rogpeppe/go-internal v1.10.0 h1:TMyTOH3F/DB16zRVcYyreMH6GnZZrwQVAoYjRBZyWFQ=
 github.com/rogpeppe/go-internal v1.10.0/go.mod h1:UQnix2H7Ngw/k4C5ijL5+65zddjncjaFoBhdsK/akog=
 github.com/sergi/go-diff v1.0.0 h1:Kpca3qRNrduNnOQeazBd0ysaKrUJiIuISHxogkT9RPQ=
