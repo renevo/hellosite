@@ -1,6 +1,7 @@
 package main
 
 import (
+	"cmp"
 	"io/fs"
 	"net/http"
 	"os"
@@ -23,7 +24,7 @@ func main() {
 		dfs, _ = fs.Sub(content, "public")
 	}
 
-	if err := bootstrap.HTTP("hello", version, http.FS(dfs)); err != nil {
+	if err := bootstrap.HTTP(cmp.Or(os.Getenv("SERVICE_NAME"), "hello"), version, http.FS(dfs)); err != nil {
 		panic(err)
 	}
 }
