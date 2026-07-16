@@ -22,7 +22,7 @@ dockers_v2:
     ids:
       - hello
     images:
-      - ghcr.io/renevo/hellosite
+      - ghcr.io/renevo/placeholder/hello
     tags:
       - "{{ .Version }}"
     dockerfile: Dockerfile
