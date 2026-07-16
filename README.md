@@ -13,7 +13,7 @@ go run .
 Snapshot:
 
 ```bash
-goreleaser --snapshot --rm-dist
+goreleaser release --snapshot --clean
 ```
 
 Release:
@@ -21,5 +21,5 @@ Release:
 ```bash
 git tag -a v0.3.0 -m "New Release"
 git push origin v0.3.0
-goreleaser release --rm-dist
+goreleaser release --clean
 ```
