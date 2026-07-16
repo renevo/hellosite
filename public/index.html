@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Hello</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08070b">
+    <meta name="description" content="A simple hello from the edge of the internet.">
+    <title>Hello.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link href="/css/hello.css" rel="stylesheet">
 </head>
+<body>
+    <canvas class="draft-field" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
 
-<body class="bg-white dark:bg-background text-black dark:text-foreground">
-    <div class="container mx-auto my-24 md:px-6">
-        <section class="background-radial-gradient mb-32">
-            <div class="px-12 py-12 text-center md:px-12">
-                <div class="container mx-auto xl:px-32">
-                    <div class="items-center">
-                        <div class="mt-12">
-                            <h1
-                                class="mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-[hsl(218,81%,95%)]">
-                                Hello, <span class="text-[hsl(218,81%,75%)]">World!</span>
-                            </h1>
-                            <p class="lead mb-4 opacity-70 text-[hsl(218,81%,85%)]">
-                                Eventually this website will have content.
-                            </p>
-                        </div>
-                    </div>
+    <main>
+        <header class="masthead">
+            <a class="wordmark" href="/" aria-label="Hello home">
+                <span class="wordmark-mark" aria-hidden="true"></span>
+                HELLO.SITE
+            </a>
+            <p class="status"><span aria-hidden="true"></span> Signal online</p>
+        </header>
+
+        <section class="hero" aria-labelledby="hello-title">
+            <p class="eyebrow"><span>001</span> A very small corner of the internet</p>
+            <h1 id="hello-title">HELLO<span aria-hidden="true">.</span></h1>
+            <div class="hero-footer">
+                <p>Nothing to announce.<br>Everything to begin.</p>
+                <div class="coordinates" aria-label="Location">
+                    <span>PLUM / 6F2DA8</span>
+                    <span>WORLD WIDE WEB</span>
                 </div>
             </div>
         </section>
-    </div>
-</body>
 
+        <footer class="page-footer">
+            <p>EST. NOW</p>
+            <p class="scroll-note">Built for the space between ideas</p>
+            <p aria-label="Copyright">&copy; <span id="year"></span></p>
+        </footer>
+    </main>
+
+    <script src="/hello.js"></script>
+</body>
 </html>
